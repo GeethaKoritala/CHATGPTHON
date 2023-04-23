@@ -13,12 +13,12 @@ example2 = "Doctor: How can I help? Patient: I have fever and headache. Doctor: 
 
 prompt = '\n'.join([instruction, ex1, ex2])
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 
 class DoctorAgent(object):
 
-    def _init_(self):
+    def __init__(self):
         self._model = 'text-davinci-003'
         self._doctor_prefix = ''
         self._patient_prefix = ''
@@ -65,7 +65,7 @@ doctor_agent = DoctorAgent()
 doctor_agent.update_prompt(prompt)
 
 
-def chat_with_doctor(patient_input, op):
+def chat_with_doctor(patient_input):
     doctor_agent.send_doctor_response()
     doctor_agent.get_patient_input(patient_input)
     if doctor_agent.stop_conversation():
