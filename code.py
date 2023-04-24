@@ -13,7 +13,7 @@ example2 = "Doctor: How can I help? Patient: I have fever and headache. Doctor: 
 
 prompt = '\n'.join([instruction, ex1, ex2])
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 
 class DoctorAgent(object):
